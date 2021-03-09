@@ -5,7 +5,7 @@
                 Dashboard
             </inertia-link>
 
-            <template v-else-if="$page.props.auth.user == 'hideme'">
+            <template v-else>
                 <inertia-link :href="route('login')" class="text-md text-gray-700 underline">
                     Log in
                 </inertia-link>
