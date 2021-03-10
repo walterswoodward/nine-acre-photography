@@ -19403,6 +19403,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "render": () => (/* binding */ render)
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+/* harmony import */ var _images_camera_w130_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../images/camera__w130.svg */ "./resources/images/camera__w130.svg");
+
 
 
 var _withId = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.withScopeId)("data-v-051daefe");
@@ -19424,12 +19426,13 @@ var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNod
 var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Register ");
 
 var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-  "class": "max-w-6xl mx-auto sm:px-6 lg:px-8"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-  "class": "flex justify-center pt-8 sm:justify-start sm:pt-0"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-  "class": "flex items-center text-6xl custom-font-1"
-}, "Nine Acre Photography")])], -1
+  "class": "flex flex-col justify-center items-center sm:flex-row sm:items-start"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
+  "class": "sm:max-w sm:w-1/5",
+  src: _images_camera_w130_svg__WEBPACK_IMPORTED_MODULE_1__.default
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+  "class": "w-4/5 sm:w-4/5 text-4xl sm:text-5xl max-w-md custom-font-1"
+}, "Nine Acre Photography")], -1
 /* HOISTED */
 );
 
@@ -19649,6 +19652,21 @@ module.exports = function (cssWithMappingToString) {
 
   return list;
 };
+
+/***/ }),
+
+/***/ "./resources/images/camera__w130.svg":
+/*!*******************************************!*\
+  !*** ./resources/images/camera__w130.svg ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/camera__w130.svg?c10f14a118607da65fd2e81b333f61ea");
 
 /***/ }),
 
