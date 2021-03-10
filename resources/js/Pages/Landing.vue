@@ -16,8 +16,8 @@
             </template>
         </div>
 
-        <div class="flex flex-col justify-center items-center sm:flex-row sm:items-start">
-            <img class="sm:max-w sm:w-1/5" src="./../../images/camera__w130.svg"/>
+        <div class="flex flex-col justify-center sm:flex-row sm:items-start">
+            <img class="w-1/5 sm:w-auto sm:max-w-md" src="./../../images/camera__w130.svg"/>
             <div class="w-4/5 sm:w-4/5 text-4xl sm:text-5xl max-w-md custom-font-1">Nine Acre Photography</div>
         </div>
     </div>
