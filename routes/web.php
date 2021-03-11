@@ -15,22 +15,22 @@ use Inertia\Inertia;
 |
 */
 
-// Route::get('/', function () {
-//     return Inertia::render('Landing', [
-//         // 'canLogin' => Route::has('login'),
-//         // 'canRegister' => Route::has('register'),
-//         'canLogin' => false,
-//         'canRegister' => false,
-//         'canWork' => Route::has('work'),
-//         'canStory' => Route::has('story'),
-//         'laravelVersion' => Application::VERSION,
-//         'phpVersion' => PHP_VERSION,
-//     ]);
-// });
-
-
-
 Route::get('/', function () {
+    return Inertia::render('Landing', [
+        // 'canLogin' => Route::has('login'),
+        // 'canRegister' => Route::has('register'),
+        'canLogin' => false,
+        'canRegister' => false,
+        'canWork' => Route::has('work'),
+        'canStory' => Route::has('story'),
+        'laravelVersion' => Application::VERSION,
+        'phpVersion' => PHP_VERSION,
+    ]);
+});
+
+
+
+Route::get('/home', function () {
     return Inertia::render('Home');
 })->name('home');
 
