@@ -26,7 +26,7 @@
                     <div class="w-4/5 sm:w-4/5 text-4xl sm:text-5xl max-w-md custom-font-1">Nine Acre Photography</div>
                 </div>
                 <div class="w-4/5">
-                    <p>Founded on the belief that human beings were made to empower one another to create, innovate, and pursue justice.</p>
+                    <p>Founded on the belief that human beings were made to empower one another to create, innovate, and pursue justice together.</p>
                 </div>
             </div>
         </inertia-link>

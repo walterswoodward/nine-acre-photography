@@ -19861,7 +19861,7 @@ var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("
   "class": "w-4/5 sm:w-4/5 text-4xl sm:text-5xl max-w-md custom-font-1"
 }, "Nine Acre Photography")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
   "class": "w-4/5"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", null, "Founded on the belief that human beings were made to empower one another to create, innovate, and pursue justice.")])], -1
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", null, "Founded on the belief that human beings were made to empower one another to create, innovate, and pursue justice together.")])], -1
 /* HOISTED */
 );
 
