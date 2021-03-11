@@ -1,22 +1,25 @@
 <template>
     <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-500 sm:items-center sm:pt-0">
-        <div v-if="canLogin" class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+        <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
             <inertia-link v-if="$page.props.auth.user" href="/dashboard" class="text-sm text-gray-700 underline">
                 Dashboard
             </inertia-link>
 
-            <template v-else-if="$idonotexist">
-                <inertia-link :href="route('login')" class="text-md text-gray-700 underline">
+            <template v-else >
+                <inertia-link v-if="canLogin" :href="route('login')" class="text-md text-gray-700 underline">
                     Log in
                 </inertia-link>
-
-                <inertia-link v-if="canRegister" :href="route('register')" class="ml-4 text-md text-gray-700 underline">
+                <inertia-link v-else-if="canRegister" :href="route('register')" class="ml-4 text-md text-gray-700 underline">
                     Register
                 </inertia-link>
+                <inertia-link :href="route('work')" class="ml-4 text-md text-gray-700 underline">
+                    Work
+                </inertia-link>
+                <inertia-link href="/story" class="ml-4 text-md text-gray-700 underline">Story</inertia-link>
             </template>
         </div>
 
-        <div class="w-full flex flex-col items-center justify-center sm:flex-row sm:items-start">
+        <div v-if="$imagesNotEmpty" class="w-full flex flex-col items-center justify-center sm:flex-row sm:items-start">
             <div class="w-4/5 flex flex-col justify-center sm:flex-row sm:items-start">
                 <img class="w-1/5 sm:w-auto sm:max-w-md" src="./../../images/camera__w130.svg"/>
                 <div class="w-4/5 sm:w-4/5 text-4xl sm:text-5xl max-w-md custom-font-1">Nine Acre Photography</div>
@@ -97,6 +100,8 @@
         props: {
             canLogin: Boolean,
             canRegister: Boolean,
+            canAbout: Boolean,
+            canWork: Boolean,
             laravelVersion: String,
             phpVersion: String,
         }

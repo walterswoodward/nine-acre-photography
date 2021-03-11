@@ -15,14 +15,32 @@ use Inertia\Inertia;
 |
 */
 
+// Route::get('/', function () {
+//     return Inertia::render('Landing', [
+//         // 'canLogin' => Route::has('login'),
+//         // 'canRegister' => Route::has('register'),
+//         'canLogin' => false,
+//         'canRegister' => false,
+//         'canWork' => Route::has('work'),
+//         'canStory' => Route::has('story'),
+//         'laravelVersion' => Application::VERSION,
+//         'phpVersion' => PHP_VERSION,
+//     ]);
+// });
+
+
+
 Route::get('/', function () {
-    return Inertia::render('Landing', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
-});
+    return Inertia::render('Home');
+})->name('home');
+
+Route::get('/story', function () {
+    return Inertia::render('Story');
+})->name('story');
+
+Route::get('/work', function () {
+    return Inertia::render('Work');
+})->name('work');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
