@@ -17608,13 +17608,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: {},
-  methods: {
-    showImagesElement: function showImagesElement() {
-      console.log(this.$refs.masonry);
-    }
-  },
-  mounted: function mounted() {
-    this.showImagesElement();
+  data: function data() {
+    return {
+      images: [{
+        src: "https://res.cloudinary.com/nineacrephotography/image/upload/v1604249965/samples/people/bicycle.jpg"
+      }, {
+        src: "https://res.cloudinary.com/nineacrephotography/image/upload/v1604249963/samples/people/jazz.jpg"
+      }, {
+        src: "https://res.cloudinary.com/nineacrephotography/image/upload/v1604249963/samples/people/boy-snow-hoodie.jpg"
+      }, {
+        src: "https://res.cloudinary.com/nineacrephotography/image/upload/v1604249961/samples/people/smiling-man.jpg"
+      }]
+    };
   }
 });
 
@@ -18512,17 +18517,17 @@ var _hoisted_1 = {
 (0,vue__WEBPACK_IMPORTED_MODULE_0__.popScopeId)();
 
 var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_1, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(7, function (name, index) {
-    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_1, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(_ctx.images, function (image, index) {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", {
       "class": "item",
       key: index
     }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
-      src: "https://res.cloudinary.com/pacmankana/image/upload/v1539881487/samples/animals/three-dogs.jpg"
+      src: image.src
     }, null, 8
     /* PROPS */
     , ["src"])]);
-  }), 64
-  /* STABLE_FRAGMENT */
+  }), 128
+  /* KEYED_FRAGMENT */
   ))], 512
   /* NEED_PATCH */
   );

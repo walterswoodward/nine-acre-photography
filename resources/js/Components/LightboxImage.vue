@@ -1,10 +1,7 @@
 <template>
   <div class="gallery" ref="masonry">
-    <div class="item" v-for="(name, index) in 7"
-        :key="index">
-      <img
-        :src="`https://res.cloudinary.com/pacmankana/image/upload/v1539881487/samples/animals/three-dogs.jpg`"
-      />
+    <div class="item" v-for="(image, index) in images" v-bind:key="index">
+      <img v-bind:src="image.src" />
     </div>
   </div>
 </template>
@@ -39,13 +36,27 @@
 <script>
 export default {
   props: {},
-  methods: {
-    showImagesElement: function () {
-      console.log(this.$refs.masonry);
-    },
-  },
-  mounted: function () {
-    this.showImagesElement();
+  data: function () {
+    return {
+      images: [
+        {
+          src:
+            "https://res.cloudinary.com/nineacrephotography/image/upload/v1604249965/samples/people/bicycle.jpg",
+        },
+        {
+          src:
+            "https://res.cloudinary.com/nineacrephotography/image/upload/v1604249963/samples/people/jazz.jpg",
+        },
+        {
+          src:
+            "https://res.cloudinary.com/nineacrephotography/image/upload/v1604249963/samples/people/boy-snow-hoodie.jpg",
+        },
+        {
+          src:
+            "https://res.cloudinary.com/nineacrephotography/image/upload/v1604249961/samples/people/smiling-man.jpg",
+        },
+      ],
+    };
   },
 };
 </script>
