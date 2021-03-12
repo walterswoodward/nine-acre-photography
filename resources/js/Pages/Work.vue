@@ -1,7 +1,5 @@
 <template>
-  <div class="images">
-    <lightbox-image> </lightbox-image>
-  </div>
+  <lightbox-image> </lightbox-image>
 </template>
 
 <style scoped>
