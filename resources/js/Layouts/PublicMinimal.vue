@@ -1,15 +1,37 @@
 <template>
-        <inertia-link :href="route('home')">
-            <div class="h-screen w-full flex flex-col items-center justify-center">
-                <div class="w-4/5 flex flex-col sm:flex-row sm:items-start">
-                    <img class="w-1/3 sm:w-auto sm:max-w-md" src="./../../images/camera__w130.svg"/>
-                    <div class="w-4/5 sm:w-4/5 text-4xl sm:text-5xl max-w-md custom-font-1">Nine Acre Photography</div>
-                </div>
-                <div class="w-4/5">
-                    <p>Founded on the belief that human beings were made to empower one another to create, innovate, and pursue justice together.</p>
-                </div>
+    <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-500 pt-14">
+        <div class="flex justify-end fixed w-screen top-0 bg-gray-100 right-0 h-14 py-4 block">
+            <inertia-link v-if="$page.props.auth.user" href="/dashboard" class="text-sm text-gray-700 underline">
+                Dashboard
+            </inertia-link>
+
+            <template v-else >
+                <inertia-link v-if="canLogin" :href="route('login')" class="text-md text-gray-600 underline">
+                    Log in
+                </inertia-link>
+                <inertia-link v-else-if="canRegister" :href="route('register')" class="ml-4 text-md text-gray-600 underline">
+                    Register
+                </inertia-link>
+                <inertia-link :href="route('work')" class="mr-4 text-md text-gray-600 underline">
+                    Work
+                </inertia-link>
+                <inertia-link :href="route('story')" class="mr-4 text-md text-gray-600 underline">Story</inertia-link>
+            </template>
+        </div>
+
+        <!-- Page Heading -->
+        <header class="bg-white shadow" v-if="$slots.header">
+            <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                <slot name="header" />
             </div>
-        </inertia-link>
+        </header>
+
+        <!-- Page Content -->
+        <main>
+            <slot />
+        </main>
+
+    </div>
 </template>
 
 <style scoped>
@@ -80,14 +102,12 @@
 </style>
 
 <script>
-import BreezePublicLayout from "@/Layouts/PublicMinimal";
-export default {
-  layout: BreezePublicLayout,
-  props: {
-    canLogin: Boolean,
-    canRegister: Boolean,
-    laravelVersion: String,
-    phpVersion: String,
-  },
-};
+    export default {
+        props: {
+            canLogin: Boolean,
+            canRegister: Boolean,
+            laravelVersion: String,
+            phpVersion: String,
+        }
+    }
 </script>

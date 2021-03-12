@@ -21,8 +21,6 @@ Route::get('/', function () {
         // 'canRegister' => Route::has('register'),
         'canLogin' => false,
         'canRegister' => false,
-        'canWork' => Route::has('work'),
-        'canStory' => Route::has('story'),
         'laravelVersion' => Application::VERSION,
         'phpVersion' => PHP_VERSION,
     ]);
