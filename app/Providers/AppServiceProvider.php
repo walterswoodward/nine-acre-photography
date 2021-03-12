@@ -24,6 +24,14 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        URL::forceScheme('https');
+        // src: https://stackoverflow.com/questions/57617864/how-to-fix-invalid-request-unsupported-ssl-request
+        //check that app is local
+        if ($this->app->isLocal()) {
+        //if local register your services you require for development
+            $this->app->register('Barryvdh\Debugbar\ServiceProvider');
+        } else {
+        //else register your services you require for production
+            $this->app['request']->server->set('HTTPS', true);
+        }
     }
 }
