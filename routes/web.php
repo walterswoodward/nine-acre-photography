@@ -27,7 +27,9 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/about', function () {
-    return Inertia::render('About');
+    return Inertia::render('About', [
+        'message' => "Hello from About.vue route"
+    ]);
 })->name('about');
 
 Route::get('/work', function () {
