@@ -1,5 +1,5 @@
 <template>
-    Hello from Story.vue
+    Hello from About.vue
 </template>
 
 <style scoped>
@@ -7,7 +7,7 @@
 </style>
 
 <script>
-    import BreezePublicLayout from "@/Layouts/Public"
+    import BreezePublicLayout from "@/Layouts/PublicMinimal"
 
     export default {
         layout: BreezePublicLayout,
