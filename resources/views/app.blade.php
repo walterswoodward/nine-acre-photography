@@ -20,6 +20,7 @@
         <!-- Scripts -->
         @routes
         <script src="{{ mix('js/app.js') }}" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/cloudinary-core/2.5.0/cloudinary-core-shrinkwrap.min.js" type="text/javascript"></script>
     </head>
     <body class="font-sans antialiased bg-gray-400" >
         @inertia

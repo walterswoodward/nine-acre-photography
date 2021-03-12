@@ -17606,18 +17606,31 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+var cl = cloudinary.Cloudinary["new"]({
+  cloud_name: "demo"
+});
+cl.responsive();
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: {},
+  methods: {
+    lightbox: function lightbox(event) {
+      console.log(event.target.name + " image clicked");
+    }
+  },
   data: function data() {
     return {
       images: [{
-        src: "https://res.cloudinary.com/nineacrephotography/image/upload/v1604249965/samples/people/bicycle.jpg"
+        name: 'bicycle.jpg',
+        path: '/v1604249965/samples/people/bicycle.jpg'
       }, {
-        src: "https://res.cloudinary.com/nineacrephotography/image/upload/v1604249963/samples/people/jazz.jpg"
+        name: 'jazz.jpg',
+        path: "/v1604249963/samples/people/jazz.jpg"
       }, {
-        src: "https://res.cloudinary.com/nineacrephotography/image/upload/v1604249963/samples/people/boy-snow-hoodie.jpg"
+        name: 'boy-snow-hoodie.jpg',
+        path: "/v1604249963/samples/people/boy-snow-hoodie.jpg"
       }, {
-        src: "https://res.cloudinary.com/nineacrephotography/image/upload/v1604249961/samples/people/smiling-man.jpg"
+        name: 'smiling-man.jpg',
+        path: "/v1604249961/samples/people/smiling-man.jpg"
       }]
     };
   }
@@ -18523,10 +18536,14 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
       "class": "item",
       key: index
     }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
-      src: image.src
+      src: 'https://res.cloudinary.com/nineacrephotography/image/upload' + image.path,
+      onClick: _cache[1] || (_cache[1] = function () {
+        return $options.lightbox && $options.lightbox.apply($options, arguments);
+      }),
+      name: image.name
     }, null, 8
     /* PROPS */
-    , ["src"])]);
+    , ["src", "name"])]);
   }), 128
   /* KEYED_FRAGMENT */
   ))], 512
@@ -20225,7 +20242,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.gallery[data-v-b30c23aa] {\n  display: grid;\n  grid-gap: 10px;\n  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));\n  grid-auto-rows: 250px 150px;\n  grid-auto-flow: dense;\n  padding: 0px 20px;\n}\n.gallery .item img[data-v-b30c23aa] {\n  width: 100%;\n  height: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n@media (min-width: 480px) {\n.gallery .item[data-v-b30c23aa]:first-child {\n    grid-area: 1 / 1 / span 2 / span 2;\n}\n.gallery .item[data-v-b30c23aa]:nth-child(3n) {\n    grid-column: span 2;\n}\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.gallery[data-v-b30c23aa] {\n  display: grid;\n  grid-gap: 10px;\n  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));\n  grid-auto-rows: 250px 150px;\n  grid-auto-flow: dense;\n  padding: 0px 20px;\n}\n.gallery .item img[data-v-b30c23aa] {\n  width: 100%;\n  height: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  cursor: pointer;\n}\n@media (min-width: 480px) {\n.gallery .item[data-v-b30c23aa]:first-child {\n    grid-area: 1 / 1 / span 2 / span 2;\n}\n.gallery .item[data-v-b30c23aa]:nth-child(3n) {\n    grid-column: span 2;\n}\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
