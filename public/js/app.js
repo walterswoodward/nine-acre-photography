@@ -19302,7 +19302,7 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
   /* PROPS */
   , ["href"])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
     href: _ctx.route('home'),
-    "class": "mr-4 text-md text-gray-600 underline"
+    "class": "mr-4 text-md text-gray-600"
   }, {
     "default": _withId(function () {
       return [_hoisted_6];
@@ -19314,7 +19314,7 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
   /* PROPS */
   , ["href"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
     href: _ctx.route('about'),
-    "class": "mr-4 text-md text-gray-600 underline"
+    "class": "mr-4 text-md text-gray-600"
   }, {
     "default": _withId(function () {
       return [_hoisted_7];
@@ -19326,7 +19326,7 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
   /* PROPS */
   , ["href"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
     href: _ctx.route('work'),
-    "class": "mr-4 text-md text-gray-600 underline"
+    "class": "mr-4 text-md text-gray-600"
   }, {
     "default": _withId(function () {
       return [_hoisted_8];
