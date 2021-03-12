@@ -28,13 +28,13 @@
         >
           Register
         </inertia-link>
-        <inertia-link :href="route('home')" class="mr-4 text-md text-gray-600">
+        <inertia-link :href="route('home')" class="mr-4 text-md text-gray-600 hover:underline">
           Home
         </inertia-link>
-        <inertia-link :href="route('about')" class="mr-4 text-md text-gray-600">
+        <inertia-link :href="route('about')" class="mr-4 text-md text-gray-600 hover:underline">
           About
         </inertia-link>
-        <inertia-link :href="route('work')" class="mr-4 text-md text-gray-600">
+        <inertia-link :href="route('work')" class="mr-4 text-md text-gray-600 hover:underline">
           Work
         </inertia-link>
 
