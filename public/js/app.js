@@ -20090,7 +20090,7 @@ var _withId = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.withScopeId)("dat
 (0,vue__WEBPACK_IMPORTED_MODULE_0__.pushScopeId)("data-v-051daefe");
 
 var _hoisted_1 = {
-  "class": "h-screen w-full flex flex-col items-center justify-center"
+  "class": "w-full h-full flex flex-col items-center justify-center items-center"
 };
 
 var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
