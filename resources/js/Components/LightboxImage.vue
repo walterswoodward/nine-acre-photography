@@ -1,34 +1,35 @@
 <template>
+<div>
   <div class="images flex justify-center flex-wrap" v-if="!showModal">
     <div class="image" v-for="(image, index) in images" v-bind:key="index">
       <img
+        class="m-1"
         v-bind:src="'https://res.cloudinary.com/nineacrephotography/image/upload/c_scale,w_300' + image.path"
-        v-on:click="lightbox"
-        v-bind:name="image.name"
+        v-on:click="toggleModal"
+        v-bind:path="image.path"
       />
     </div>
   </div>
-  <div class="lightbox__wrap" v-bind:key="0" v-if="showModal">
-    <button class="modal__close" v-on:click="lightbox">x</button>
+  <div class="lightbox__wrap" v-bind:key="0" v-if="showModal" v-on:click="toggleModal">
+    <button class="modal__close" v-on:click="toggleModal">x</button>
     <button class="arrow__right">&gt;</button>
     <button class="arrow__left">&lt;</button>
     <img
       class="lightbox__image"
-      v-bind:src="
-        'https://res.cloudinary.com/nineacrephotography/image/upload' + images[0].path
-      "
+      v-bind:src="'https://res.cloudinary.com/nineacrephotography/image/upload' + modalImagePath"
       v-on:click="lightbox"
-      v-bind:name="images[0].name"
     />
+  </div>
   </div>
 </template>
 
 <style scoped>
 .image {
+    cursor: pointer;
 }
 
 .arrow__right, .arrow__left {
-        position: absolute;
+    position: absolute;
     font-size: 6rem;
 }
 
@@ -70,34 +71,36 @@ cl.responsive();
 export default {
   props: {},
   methods: {
-    lightbox: function (event) {
-      console.log(event.target.name + " image clicked");
+    toggleModal: function (event) {
+      event.stopPropagation();
+      this.modalImagePath = event.target.getAttribute('path');
       this.showModal = !this.showModal;
     },
   },
   data: function () {
     return {
     showModal: false,
+    modalImage: null,
       images: [
         {
           name: "bicycle.jpg",
           path: "/v1604249965/samples/people/bicycle.jpg",
         },
-        // {
-        //      name: 'jazz.jpg',
-        //   path:
-        //     "/v1604249963/samples/people/jazz.jpg",
-        // },
-        // {
-        //      name: 'boy-snow-hoodie.jpg',
-        //   path:
-        //     "/v1604249963/samples/people/boy-snow-hoodie.jpg",
-        // },
-        // {
-        //      name: 'smiling-man.jpg',
-        //   path:
-        //     "/v1604249961/samples/people/smiling-man.jpg",
-        // },
+        {
+             name: 'jazz.jpg',
+          path:
+            "/v1604249963/samples/people/jazz.jpg",
+        },
+        {
+             name: 'boy-snow-hoodie.jpg',
+          path:
+            "/v1604249963/samples/people/boy-snow-hoodie.jpg",
+        },
+        {
+             name: 'smiling-man.jpg',
+          path:
+            "/v1604249961/samples/people/smiling-man.jpg",
+        },
       ],
     };
   },
