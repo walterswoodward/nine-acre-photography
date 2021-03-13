@@ -17615,23 +17615,31 @@ cl.responsive();
   methods: {
     lightbox: function lightbox(event) {
       console.log(event.target.name + " image clicked");
+      this.showModal = !this.showModal;
     }
   },
   data: function data() {
     return {
+      showModal: false,
       images: [{
-        name: 'bicycle.jpg',
-        path: '/v1604249965/samples/people/bicycle.jpg'
-      }, {
-        name: 'jazz.jpg',
-        path: "/v1604249963/samples/people/jazz.jpg"
-      }, {
-        name: 'boy-snow-hoodie.jpg',
-        path: "/v1604249963/samples/people/boy-snow-hoodie.jpg"
-      }, {
-        name: 'smiling-man.jpg',
-        path: "/v1604249961/samples/people/smiling-man.jpg"
-      }]
+        name: "bicycle.jpg",
+        path: "/v1604249965/samples/people/bicycle.jpg"
+      } // {
+      //      name: 'jazz.jpg',
+      //   path:
+      //     "/v1604249963/samples/people/jazz.jpg",
+      // },
+      // {
+      //      name: 'boy-snow-hoodie.jpg',
+      //   path:
+      //     "/v1604249963/samples/people/boy-snow-hoodie.jpg",
+      // },
+      // {
+      //      name: 'smiling-man.jpg',
+      //   path:
+      //     "/v1604249961/samples/people/smiling-man.jpg",
+      // },
+      ]
     };
   }
 });
@@ -18524,19 +18532,35 @@ var _withId = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.withScopeId)("dat
 (0,vue__WEBPACK_IMPORTED_MODULE_0__.pushScopeId)("data-v-b30c23aa");
 
 var _hoisted_1 = {
-  "class": "gallery",
-  ref: "masonry"
+  key: 0,
+  "class": "images flex justify-center flex-wrap"
 };
+var _hoisted_2 = {
+  "class": "lightbox__wrap",
+  key: 0
+};
+
+var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("button", {
+  "class": "arrow__right"
+}, ">", -1
+/* HOISTED */
+);
+
+var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("button", {
+  "class": "arrow__left"
+}, "<", -1
+/* HOISTED */
+);
 
 (0,vue__WEBPACK_IMPORTED_MODULE_0__.popScopeId)();
 
 var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_1, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(_ctx.images, function (image, index) {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [!_ctx.showModal ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_1, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(_ctx.images, function (image, index) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", {
-      "class": "item",
+      "class": "image",
       key: index
     }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
-      src: 'https://res.cloudinary.com/nineacrephotography/image/upload' + image.path,
+      src: 'https://res.cloudinary.com/nineacrephotography/image/upload/c_scale,w_300' + image.path,
       onClick: _cache[1] || (_cache[1] = function () {
         return $options.lightbox && $options.lightbox.apply($options, arguments);
       }),
@@ -18546,8 +18570,22 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
     , ["src", "name"])]);
   }), 128
   /* KEYED_FRAGMENT */
-  ))], 512
-  /* NEED_PATCH */
+  ))])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), _ctx.showModal ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("button", {
+    "class": "modal__close",
+    onClick: _cache[2] || (_cache[2] = function () {
+      return $options.lightbox && $options.lightbox.apply($options, arguments);
+    })
+  }, "x"), _hoisted_3, _hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
+    "class": "lightbox__image",
+    src: 'https://res.cloudinary.com/nineacrephotography/image/upload' + _ctx.images[0].path,
+    onClick: _cache[3] || (_cache[3] = function () {
+      return $options.lightbox && $options.lightbox.apply($options, arguments);
+    }),
+    name: _ctx.images[0].name
+  }, null, 8
+  /* PROPS */
+  , ["src", "name"])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)], 64
+  /* STABLE_FRAGMENT */
   );
 });
 
@@ -20242,7 +20280,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.gallery[data-v-b30c23aa] {\n  display: grid;\n  grid-gap: 10px;\n  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));\n  grid-auto-rows: 250px 150px;\n  grid-auto-flow: dense;\n  padding: 0px 20px;\n}\n.gallery .item img[data-v-b30c23aa] {\n  width: 100%;\n  height: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  cursor: pointer;\n}\n@media (min-width: 480px) {\n.gallery .item[data-v-b30c23aa]:first-child {\n    grid-area: 1 / 1 / span 2 / span 2;\n}\n.gallery .item[data-v-b30c23aa]:nth-child(3n) {\n    grid-column: span 2;\n}\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.image[data-v-b30c23aa] {\n}\n.arrow__right[data-v-b30c23aa], .arrow__left[data-v-b30c23aa] {\n        position: absolute;\n    font-size: 6rem;\n}\n.arrow__right[data-v-b30c23aa] {\n    right: 7rem;\n}\n.arrow__left[data-v-b30c23aa] {\n    left: 7rem;\n}\n.modal__close[data-v-b30c23aa] {\n    position: absolute;\n    right: 3rem;\n    font-size: 3rem;\n    top: 1rem;\n}\n.lightbox__wrap[data-v-b30c23aa] {\n  background: rgba(0,0,0,0.5);\n  position: absolute;\n  left:0;\n  width: 100%;\n  height: calc(100vh - 3.5rem);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.lightbox__image[data-v-b30c23aa] {\n  display: flex;\n  width: 50%;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
