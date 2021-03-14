@@ -10,6 +10,7 @@
           "
           v-on:click="toggleModal"
           v-bind:path="image.path"
+          v-bind:index="index"
         />
       </div>
     </div>
@@ -17,7 +18,7 @@
       <!-- <button class="arrow__right"><font-awesome-icon icon="angle-double-right" /></button> -->
       <!-- <button class="arrow__left"><font-awesome-icon :icon="['fas', 'angle-double-left']" /></button> -->
       <div class="lightbox-image__actions">
-        <div class="lightbox-image-actions__count">1/3</div>
+        <div class="lightbox-image-actions__count">{{index}}/4</div>
         <div class="lightbox-image-actions__actions">
           <font-awesome-icon icon="share-alt" />
           <font-awesome-icon icon="clone" />
@@ -51,6 +52,10 @@
 </template>
 
 <style scoped>
+.images {
+    margin-top: 50px;
+}
+
 .image {
   cursor: pointer;
 }
@@ -85,7 +90,8 @@
   position: absolute;
   left: 0;
   width: 100%;
-  height: calc(100vh - 3.5rem);
+  top: 50px;
+  height: calc(100vh - 50px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -177,6 +183,7 @@ export default {
     toggleModal: function (event) {
       event.stopPropagation();
       this.modalImagePath = event.target.getAttribute("path");
+      this.index = parseInt(event.target.getAttribute("index")) + 1;
       this.showModal = !this.showModal;
     },
   },

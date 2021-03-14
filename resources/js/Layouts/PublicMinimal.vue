@@ -1,44 +1,52 @@
 <template>
   <div
-    class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-500 pt-14"
+    class="relative flex items-top h-screen justify-center bg-gray-100 dark:bg-gray-500"
   >
-    <div
-      class="flex justify-end fixed w-screen top-0 bg-gray-100 right-0 h-14 py-4 block"
-    >
-      <inertia-link
-        v-if="$page.props.auth.user"
-        href="/dashboard"
-        class="text-sm text-gray-700 underline"
-      >
-        Dashboard
-      </inertia-link>
-
-      <template v-else>
+    <div class="navbar flex justify-end fixed w-screen top-0 bg-gray-100">
+      <div class="navbar__links">
         <inertia-link
-          v-if="canLogin"
-          :href="route('login')"
-          class="text-md text-gray-600 underline"
+          v-if="$page.props.auth.user"
+          href="/dashboard"
+          class="text-sm text-gray-700 underline"
         >
-          Log in
-        </inertia-link>
-        <inertia-link
-          v-else-if="canRegister"
-          :href="route('register')"
-          class="ml-4 text-md text-gray-600 underline"
-        >
-          Register
-        </inertia-link>
-        <inertia-link :href="route('home')" class="mr-4 text-md text-gray-600 hover:underline">
-          Home
-        </inertia-link>
-        <inertia-link :href="route('about')" class="mr-4 text-md text-gray-600 hover:underline">
-          About
-        </inertia-link>
-        <inertia-link :href="route('work')" class="mr-4 text-md text-gray-600 hover:underline">
-          Work
+          Dashboard
         </inertia-link>
 
-      </template>
+        <template v-else>
+          <inertia-link
+            v-if="canLogin"
+            :href="route('login')"
+            class="text-md text-gray-600 underline"
+          >
+            Log in
+          </inertia-link>
+          <inertia-link
+            v-else-if="canRegister"
+            :href="route('register')"
+            class="ml-4 text-md text-gray-600 underline"
+          >
+            Register
+          </inertia-link>
+          <inertia-link
+            :href="route('home')"
+            class="mr-4 text-md text-gray-600 hover:underline"
+          >
+            Home
+          </inertia-link>
+          <inertia-link
+            :href="route('about')"
+            class="mr-4 text-md text-gray-600 hover:underline"
+          >
+            About
+          </inertia-link>
+          <inertia-link
+            :href="route('work')"
+            class="mr-4 text-md text-gray-600 hover:underline"
+          >
+            Work
+          </inertia-link>
+        </template>
+      </div>
     </div>
 
     <!-- Page Heading -->
@@ -56,6 +64,16 @@
 </template>
 
 <style scoped>
+.navbar {
+  height: 50px;
+}
+
+.navbar__links {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
 .custom-font-1 {
   font-family: "Cinzel Decorative";
 }

@@ -1,9 +1,13 @@
 <template>
+    <div class="hello">
+    </div>
     Hello from Home.vue
 </template>
 
 <style scoped>
-
+.hello {
+    padding-top: 50px;
+}
 </style>
 
 <script>

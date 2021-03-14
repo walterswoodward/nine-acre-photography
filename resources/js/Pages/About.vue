@@ -1,10 +1,14 @@
 <template>
-  <div>
+  <div class="about">
     {{ message }}
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.about {
+    margin-top: 50px;
+}
+</style>
 
 <script>
 import BreezePublicLayout from "@/Layouts/PublicMinimal";
