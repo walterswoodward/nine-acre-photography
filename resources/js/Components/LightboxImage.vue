@@ -20,11 +20,11 @@
       <div class="lightbox-image__actions">
         <div class="lightbox-image-actions__count">{{index}}/4</div>
         <div class="lightbox-image-actions__actions">
-          <font-awesome-icon icon="share-alt" />
-          <font-awesome-icon icon="clone" />
-          <font-awesome-icon icon="search-minus" />
-          <font-awesome-icon icon="search-plus" />
-          <font-awesome-icon icon="file-download" />
+          <!-- <font-awesome-icon icon="share-alt" /> -->
+          <!-- <font-awesome-icon icon="clone" /> -->
+          <!-- <font-awesome-icon icon="search-minus" /> -->
+          <!-- <font-awesome-icon icon="search-plus" /> -->
+          <!-- <font-awesome-icon icon="file-download" /> -->
           <button class="modal__close" v-on:click="toggleModal">
             <font-awesome-icon :icon="['fas', 'times']" />
           </button>
@@ -143,7 +143,7 @@
   width: 30%;
   display: flex;
   min-width: 150px;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: center;
 }
 </style>
