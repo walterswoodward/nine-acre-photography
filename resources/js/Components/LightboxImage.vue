@@ -11,6 +11,9 @@
           v-on:click="toggleModal"
           v-bind:path="image.path"
           v-bind:index="index"
+          v-bind:title="image.title"
+          v-bind:description="image.description"
+          v-bind:specs="image.specs"
         />
       </div>
     </div>
@@ -26,14 +29,14 @@
           <!-- <font-awesome-icon icon="search-plus" /> -->
           <!-- <font-awesome-icon icon="file-download" /> -->
           <button class="modal__close" v-on:click="toggleModal">
-            <font-awesome-icon :icon="['fas', 'times']" />
+            <font-awesome-icon :icon="['fas', 'times']" class="text-xl"/>
           </button>
         </div>
       </div>
       <div class="lightbox-image__caption">
-        <p class="lightbox-image-caption__title">Title</p>
-        <p class="lightbox-image-caption__specs">Specs</p>
-        <p class="lightbox-image-caption__description">Description</p>
+        <p class="lightbox-image-caption__title">{{imageTitle}}</p>
+        <p class="lightbox-image-caption__specs">{{imageSpecs}}</p>
+        <p class="lightbox-image-caption__description">{{imageDescription}}</p>
       </div>
       <div class="lightbox-image__wrap">
         <div
@@ -79,12 +82,6 @@
   color: #fff;
 }
 
-.modal__close {
-  /* position: absolute;
-  right: 3rem;
-  font-size: 3rem;
-  top: 1rem; */
-}
 
 .lightbox__wrap {
   position: absolute;
@@ -182,6 +179,9 @@ export default {
       event.stopPropagation();
       this.modalImagePath = event.target.getAttribute("path");
       this.index = parseInt(event.target.getAttribute("index")) + 1;
+      this.imageTitle = event.target.getAttribute("title");
+      this.imageSpecs = event.target.getAttribute("specs");
+      this.imageDescription = event.target.getAttribute("description");
       this.showModal = !this.showModal;
     },
   },
@@ -191,21 +191,26 @@ export default {
       modalImage: null,
       images: [
         {
-          name: "bicycle.jpg",
-          path: "/v1604249965/samples/people/bicycle.jpg",
+          name: "07620025_BLK_zeizz3.jpg",
+          path: "/v1615741521/Work/07620025_BLK_zeizz3.jpg",
+          title: "Symmetry",
+          specs: "camera specs for Symmetry",
+          description: "I think of all that we have created. How none of it compares to this flower"
         },
         {
-          name: "jazz.jpg",
-          path: "/v1604249963/samples/people/jazz.jpg",
+          name: "000077340007_zefxif.jpg",
+          path: "/v1615741543/Work/000077340007_zefxif.jpg",
+          title: "New Morning",
+          specs: "camera specs for New Morning",
+          description: "Blades of grass and morning dew remind me of my hope anew"
         },
         {
-          name: "boy-snow-hoodie.jpg",
-          path: "/v1604249963/samples/people/boy-snow-hoodie.jpg",
-        },
-        {
-          name: "smiling-man.jpg",
-          path: "/v1604249961/samples/people/smiling-man.jpg",
-        },
+          name: "000082770009_mtkalu.jpg",
+          path: "/v1615741644/Work/000082770009_mtkalu.jpg",
+          title: "Another Way",
+          specs: "camera specs for Another Way",
+          description: "Beyond that gate is another life just waiting for you"
+        }
       ]
     };
   },

@@ -27663,6 +27663,9 @@ _fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_0__.library.add(_fort
       event.stopPropagation();
       this.modalImagePath = event.target.getAttribute("path");
       this.index = parseInt(event.target.getAttribute("index")) + 1;
+      this.imageTitle = event.target.getAttribute("title");
+      this.imageSpecs = event.target.getAttribute("specs");
+      this.imageDescription = event.target.getAttribute("description");
       this.showModal = !this.showModal;
     }
   },
@@ -27671,17 +27674,23 @@ _fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_0__.library.add(_fort
       showModal: false,
       modalImage: null,
       images: [{
-        name: "bicycle.jpg",
-        path: "/v1604249965/samples/people/bicycle.jpg"
+        name: "07620025_BLK_zeizz3.jpg",
+        path: "/v1615741521/Work/07620025_BLK_zeizz3.jpg",
+        title: "Symmetry",
+        specs: "camera specs for Symmetry",
+        description: "I think of all that we have created. How none of it compares to this flower"
       }, {
-        name: "jazz.jpg",
-        path: "/v1604249963/samples/people/jazz.jpg"
+        name: "000077340007_zefxif.jpg",
+        path: "/v1615741543/Work/000077340007_zefxif.jpg",
+        title: "New Morning",
+        specs: "camera specs for New Morning",
+        description: "Blades of grass and morning dew remind me of my hope anew"
       }, {
-        name: "boy-snow-hoodie.jpg",
-        path: "/v1604249963/samples/people/boy-snow-hoodie.jpg"
-      }, {
-        name: "smiling-man.jpg",
-        path: "/v1604249961/samples/people/smiling-man.jpg"
+        name: "000082770009_mtkalu.jpg",
+        path: "/v1615741644/Work/000082770009_mtkalu.jpg",
+        title: "Another Way",
+        specs: "camera specs for Another Way",
+        description: "Beyond that gate is another life just waiting for you"
       }]
     };
   }
@@ -28591,20 +28600,19 @@ var _hoisted_4 = {
 var _hoisted_5 = {
   "class": "lightbox-image-actions__actions"
 };
-
-var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+var _hoisted_6 = {
   "class": "lightbox-image__caption"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", {
-  "class": "lightbox-image-caption__title"
-}, "Title"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", {
-  "class": "lightbox-image-caption__specs"
-}, "Specs"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", {
-  "class": "lightbox-image-caption__description"
-}, "Description")], -1
-/* HOISTED */
-);
-
+};
 var _hoisted_7 = {
+  "class": "lightbox-image-caption__title"
+};
+var _hoisted_8 = {
+  "class": "lightbox-image-caption__specs"
+};
+var _hoisted_9 = {
+  "class": "lightbox-image-caption__description"
+};
+var _hoisted_10 = {
   "class": "lightbox-image__wrap"
 };
 
@@ -28624,10 +28632,13 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
         return $options.toggleModal && $options.toggleModal.apply($options, arguments);
       }),
       path: image.path,
-      index: index
+      index: index,
+      title: image.title,
+      description: image.description,
+      specs: image.specs
     }, null, 8
     /* PROPS */
-    , ["src", "path", "index"])]);
+    , ["src", "path", "index", "title", "description", "specs"])]);
   }), 128
   /* KEYED_FRAGMENT */
   ))])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), _ctx.showModal ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <button class=\"arrow__right\"><font-awesome-icon icon=\"angle-double-right\" /></button> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <button class=\"arrow__left\"><font-awesome-icon :icon=\"['fas', 'angle-double-left']\" /></button> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.index) + "/4", 1
@@ -28638,8 +28649,15 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
       return $options.toggleModal && $options.toggleModal.apply($options, arguments);
     })
   }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_font_awesome_icon, {
-    icon: ['fas', 'times']
-  })])])]), _hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+    icon: ['fas', 'times'],
+    "class": "text-xl"
+  })])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", _hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.imageTitle), 1
+  /* TEXT */
+  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", _hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.imageSpecs), 1
+  /* TEXT */
+  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", _hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.imageDescription), 1
+  /* TEXT */
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
     "class": "lightbox__image",
     style: {
       backgroundImage: 'url(https://res.cloudinary.com/nineacrephotography/image/upload' + _ctx.modalImagePath + ')'
@@ -30371,7 +30389,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.images[data-v-b30c23aa] {\n    margin-top: 50px;\n}\n.image[data-v-b30c23aa] {\n  cursor: pointer;\n}\n.arrow__right[data-v-b30c23aa],\n.arrow__left[data-v-b30c23aa] {\n  position: absolute;\n  font-size: 2.5rem;\n}\n.arrow__right[data-v-b30c23aa] {\n  right: 60px;\n}\n.arrow__left[data-v-b30c23aa] {\n  left: 60px;\n}\n.arrow__right[data-v-b30c23aa]:hover,\n.arrow__left[data-v-b30c23aa]:hover {\n  color: #fff;\n}\n.modal__close[data-v-b30c23aa] {\n  /* position: absolute;\n  right: 3rem;\n  font-size: 3rem;\n  top: 1rem; */\n}\n.lightbox__wrap[data-v-b30c23aa] {\n  position: absolute;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.lightbox-image__wrap[data-v-b30c23aa] {\n  width: 100vw;\n  height: 100vh;\n}\n.lightbox__image[data-v-b30c23aa] {\n  width: 100%;\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center;\n  height: 100%;\n}\n.lightbox-image__actions[data-v-b30c23aa],\n.lightbox-image__caption[data-v-b30c23aa] {\n  position: fixed;\n  background: rgba(0, 0, 0);\n  width: 100%;\n  color: #fff;\n  padding: 10px;\n  text-align: center;\n}\n.lightbox-image__caption[data-v-b30c23aa] {\n  bottom: 0;\n}\n.lightbox-image-caption__specs[data-v-b30c23aa],\n.lightbox-image-caption__description[data-v-b30c23aa] {\n  font-size: 0.75rem;\n}\n.lightbox-image__actions[data-v-b30c23aa] {\n  display: flex;\n  justify-content: space-between;\n}\n.lightbox-image-actions__count[data-v-b30c23aa] {\n  font-size: 0.75rem;\n  display: flex;\n  align-items: center;\n}\n.lightbox-image-actions__actions[data-v-b30c23aa] {\n  width: 30%;\n  display: flex;\n  min-width: 150px;\n  justify-content: flex-end;\n  align-items: center;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.images[data-v-b30c23aa] {\n    margin-top: 50px;\n}\n.image[data-v-b30c23aa] {\n  cursor: pointer;\n}\n.arrow__right[data-v-b30c23aa],\n.arrow__left[data-v-b30c23aa] {\n  position: absolute;\n  font-size: 2.5rem;\n}\n.arrow__right[data-v-b30c23aa] {\n  right: 60px;\n}\n.arrow__left[data-v-b30c23aa] {\n  left: 60px;\n}\n.arrow__right[data-v-b30c23aa]:hover,\n.arrow__left[data-v-b30c23aa]:hover {\n  color: #fff;\n}\n.lightbox__wrap[data-v-b30c23aa] {\n  position: absolute;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.lightbox-image__wrap[data-v-b30c23aa] {\n  width: 100vw;\n  height: 100vh;\n}\n.lightbox__image[data-v-b30c23aa] {\n  width: 100%;\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center;\n  height: 100%;\n}\n.lightbox-image__actions[data-v-b30c23aa],\n.lightbox-image__caption[data-v-b30c23aa] {\n  position: fixed;\n  background: rgba(0, 0, 0);\n  width: 100%;\n  color: #fff;\n  padding: 10px;\n  text-align: center;\n}\n.lightbox-image__caption[data-v-b30c23aa] {\n  bottom: 0;\n}\n.lightbox-image-caption__specs[data-v-b30c23aa],\n.lightbox-image-caption__description[data-v-b30c23aa] {\n  font-size: 0.75rem;\n}\n.lightbox-image__actions[data-v-b30c23aa] {\n  display: flex;\n  justify-content: space-between;\n}\n.lightbox-image-actions__count[data-v-b30c23aa] {\n  font-size: 0.75rem;\n  display: flex;\n  align-items: center;\n}\n.lightbox-image-actions__actions[data-v-b30c23aa] {\n  width: 30%;\n  display: flex;\n  min-width: 150px;\n  justify-content: flex-end;\n  align-items: center;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
