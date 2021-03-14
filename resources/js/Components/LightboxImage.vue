@@ -123,6 +123,12 @@
   justify-content: space-between;
 }
 
+.lightbox-image-actions__count {
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+}
+
 .lightbox-image-actions__actions {
     width: 30%;
     display:flex;
