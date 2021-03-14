@@ -106,7 +106,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  height: calc(100vh - 50px);
+  height: 100%;
 }
 
 .lightbox-image__actions,
