@@ -102,11 +102,11 @@
 }
 
 .lightbox__image {
-  width: 100%;
+  /* width: 100%;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100%;
+  height: 100%; */
 }
 
 .lightbox-image__actions,
