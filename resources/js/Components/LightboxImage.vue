@@ -90,7 +90,6 @@
   position: absolute;
   left: 0;
   width: 100%;
-  top: 50px;
   height: calc(100vh - 50px);
   display: flex;
   flex-direction: column;
@@ -113,7 +112,7 @@
 .lightbox-image__actions,
 .lightbox-image__caption {
   position: fixed;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0);
   width: 100%;
   color: #fff;
   padding: 10px;
@@ -207,7 +206,7 @@ export default {
           name: "smiling-man.jpg",
           path: "/v1604249961/samples/people/smiling-man.jpg",
         },
-      ],
+      ]
     };
   },
 };
