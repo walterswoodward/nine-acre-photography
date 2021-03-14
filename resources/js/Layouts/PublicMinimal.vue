@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative flex items-top h-screen justify-center bg-gray-100 dark:bg-gray-500"
+    class="relative flex items-top min-h-screen justify-center bg-gray-100 dark:bg-gray-500"
   >
     <div class="navbar flex justify-end fixed w-screen top-0 bg-gray-100">
       <div class="navbar__links">

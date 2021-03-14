@@ -103,12 +103,11 @@
 }
 
 .lightbox__image {
-  display: flex;
   width: 100%;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100%;
+  height: calc(100vh - 50px);
 }
 
 .lightbox-image__actions,
