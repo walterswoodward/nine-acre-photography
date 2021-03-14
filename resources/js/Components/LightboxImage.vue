@@ -90,7 +90,7 @@
   position: absolute;
   left: 0;
   width: 100%;
-  height: calc(100vh - 50px);
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
