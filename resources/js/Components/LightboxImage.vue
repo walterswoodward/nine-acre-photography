@@ -16,34 +16,35 @@
     <div class="lightbox__wrap" v-bind:key="0" v-if="showModal">
       <!-- <button class="arrow__right"><font-awesome-icon icon="angle-double-right" /></button> -->
       <!-- <button class="arrow__left"><font-awesome-icon :icon="['fas', 'angle-double-left']" /></button> -->
-      <div
-        class="lightbox__image"
-        v-bind:style="{
-          backgroundImage:
-            'url(https://res.cloudinary.com/nineacrephotography/image/upload' +
-            modalImagePath +
-            ')',
-        }"
-        v-on:click="lightbox"
-      >
-        <div class="lightbox-image__actions">
-          <div class="lightbox-image-actions__count">1/3</div>
-          <div class="lightbox-image-actions__actions">
-            <font-awesome-icon icon="share-alt" />
-            <font-awesome-icon icon="clone" />
-            <font-awesome-icon icon="search-minus" />
-            <font-awesome-icon icon="search-plus" />
-            <font-awesome-icon icon="file-download" />
-            <button class="modal__close" v-on:click="toggleModal">
-              <font-awesome-icon :icon="['fas', 'times']" />
-            </button>
-          </div>
+      <div class="lightbox-image__actions">
+        <div class="lightbox-image-actions__count">1/3</div>
+        <div class="lightbox-image-actions__actions">
+          <font-awesome-icon icon="share-alt" />
+          <font-awesome-icon icon="clone" />
+          <font-awesome-icon icon="search-minus" />
+          <font-awesome-icon icon="search-plus" />
+          <font-awesome-icon icon="file-download" />
+          <button class="modal__close" v-on:click="toggleModal">
+            <font-awesome-icon :icon="['fas', 'times']" />
+          </button>
         </div>
-        <div class="lightbox-image__caption">
-          <p class="lightbox-image-caption__title">Title</p>
-          <p class="lightbox-image-caption__specs">Specs</p>
-          <p class="lightbox-image-caption__description">Description</p>
-        </div>
+      </div>
+      <div class="lightbox-image__caption">
+        <p class="lightbox-image-caption__title">Title</p>
+        <p class="lightbox-image-caption__specs">Specs</p>
+        <p class="lightbox-image-caption__description">Description</p>
+      </div>
+      <div class="lightbox-image__wrap">
+        <div
+          class="lightbox__image"
+          v-bind:style="{
+            backgroundImage:
+              'url(https://res.cloudinary.com/nineacrephotography/image/upload' +
+              modalImagePath +
+              ')',
+          }"
+          v-on:click="lightbox"
+        ></div>
       </div>
     </div>
   </div>
@@ -81,7 +82,6 @@
 }
 
 .lightbox__wrap {
-  background: rgba(0, 0, 0, 0.5);
   position: absolute;
   left: 0;
   width: 100%;
@@ -91,11 +91,17 @@
   align-items: center;
 }
 
+.lightbox-image__wrap {
+  width: 100%;
+  height: 100%;
+}
+
 .lightbox__image {
   display: flex;
   width: 100%;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
   height: 100%;
 }
 
@@ -124,20 +130,18 @@
 }
 
 .lightbox-image-actions__count {
-    font-size: 0.75rem;
-    display: flex;
-    align-items: center;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
 }
 
 .lightbox-image-actions__actions {
-    width: 30%;
-    display:flex;
-    min-width: 150px;
-    justify-content: space-around;
-    align-items: center;
+  width: 30%;
+  display: flex;
+  min-width: 150px;
+  justify-content: space-around;
+  align-items: center;
 }
-
-
 </style>
 
 <script>
