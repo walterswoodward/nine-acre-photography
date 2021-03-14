@@ -86,16 +86,17 @@
 .lightbox__wrap {
   position: absolute;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+    margin-top: 50px;
+  height: calc(100vh - 50px);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .lightbox-image__wrap {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
 }
 
 .lightbox__image {
@@ -109,7 +110,7 @@
 .lightbox-image__actions,
 .lightbox-image__caption {
   position: fixed;
-  background: rgba(0, 0, 0);
+  background: rgba(0, 0, 0, 0.7);
   width: 100%;
   color: #fff;
   padding: 10px;
