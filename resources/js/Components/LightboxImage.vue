@@ -88,7 +88,7 @@
   left: 0;
   width: 100vw;
     margin-top: 50px;
-  height: calc(100vh - 50px);
+  height: calc(100% - 50px);
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -1,8 +1,8 @@
 <template>
   <div
-    class="relative flex items-top min-h-screen justify-center bg-gray-100 dark:bg-gray-500"
+    id="public-minimal__wrap" class="relative flex items-top min-h-screen justify-center bg-gray-100 dark:bg-gray-500"
   >
-    <div class="navbar flex justify-end fixed w-screen top-0 bg-gray-100">
+    <div class="navbar flex justify-end fixed w-full top-0 bg-gray-100">
       <div class="navbar__links">
         <inertia-link
           v-if="$page.props.auth.user"
@@ -64,6 +64,10 @@
 </template>
 
 <style scoped>
+.public-minimal__wrap {
+
+}
+
 .navbar {
   height: 50px;
 }
@@ -148,5 +152,9 @@ export default {
     laravelVersion: String,
     phpVersion: String,
   },
+  mounted: function () {
+      console.log("Setting public-minimal__wrap height to ", window.innerHeight);
+      document.getElementById('public-minimal__wrap').style.minHeight = window.innerHeight + 'px';
+  }
 };
 </script>
