@@ -77,11 +77,11 @@
 }
 
 .arrow__right {
-  right: 60px;
+  padding-left: 10%;
 }
 
 .arrow__left {
-  left: 60px;
+  padding-right: 10%;
 }
 
 .arrow__right:hover,
@@ -159,10 +159,7 @@
 }
 
 .lightbox-image-actions__change {
-  width: 10rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  width: 40%;
 }
 
 .lightbox-image-actions__actions {
