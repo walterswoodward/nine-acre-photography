@@ -96,7 +96,7 @@
 
 .lightbox-image__wrap {
   width: 100%;
-  height: 77%;
+  height: 74%;
 }
 
 .lightbox__image {
@@ -120,7 +120,11 @@
 
 .lightbox-image__caption {
   bottom: 0;
-  height: 15%;
+  height: 18%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .lightbox-image-caption__title {
