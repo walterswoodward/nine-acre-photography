@@ -28665,10 +28665,7 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
     "class": "lightbox__image",
     style: {
       backgroundImage: 'url(https://res.cloudinary.com/nineacrephotography/image/upload' + _ctx.modalImagePath + ')'
-    },
-    onClick: _cache[3] || (_cache[3] = function () {
-      return _ctx.lightbox && _ctx.lightbox.apply(_ctx, arguments);
-    })
+    }
   }, null, 4
   /* STYLE */
   )])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]);

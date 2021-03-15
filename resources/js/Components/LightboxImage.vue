@@ -47,7 +47,6 @@
               modalImagePath +
               ')',
           }"
-          v-on:click="lightbox"
         ></div>
       </div>
     </div>
