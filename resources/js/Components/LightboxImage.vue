@@ -153,9 +153,7 @@
 }
 
 .lightbox-image-actions__actions {
-  width: 30%;
   display: flex;
-  min-width: 150px;
   justify-content: flex-end;
   align-items: center;
 }

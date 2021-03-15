@@ -152,8 +152,9 @@ export default {
     laravelVersion: String,
     phpVersion: String,
   },
-  mounted: function () {
+  mounted: function () { // note that this should never be an arrow function
       // To address this: https://stackoverflow.com/questions/37112218/css3-100vh-not-constant-in-mobile-browser
+    //   console.log( window.innerHeight + 'px');
       document.getElementById('public-minimal__wrap').style.minHeight = window.innerHeight + 'px';
   }
 };
