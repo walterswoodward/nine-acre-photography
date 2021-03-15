@@ -156,6 +156,12 @@ display: flex;
   justify-content: flex-end;
   align-items: center;
 }
+
+.modal__close {
+      display: flex;
+  justify-content: center;
+  align-items: center;
+}
 </style>
 
 <script>
