@@ -1,10 +1,11 @@
 <template>
-  <div class="about">
-    <div class="about__bio text-sm">
+  <div class="about flex flex-col-reverse sm:flex-row sm:justify-flex-end">
+
+    <div class="about__bio w-full sm:w-1/2 text-sm sm:items-center sm:text-center">
       {{ bio }}
     </div>
     <div
-      class="about__image"
+      class="about__image w-full sm:w-1/2"
       v-bind:style="{
         backgroundImage: 'url(' + aboutImage + ')',
       }"
@@ -17,7 +18,6 @@
   margin-top: 50px;
   height: calc(100% - 50px);
   background: black;
-  display: flex;
   justify-content: flex-end;
 }
 
@@ -27,18 +27,18 @@
   background-position: 100% 0%;
   background-color: #000;
   height: 100%;
-  width: 50%;
   clip-path: rect(10px, 20px, 30px, 40px);
 }
 
 .about__bio {
   color: #ddd;
-  width: 40%;
   height: 100%;
+  padding: 10px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center; */
+  /* justify-content: center; */
 }
+
 </style>
 
 <script>

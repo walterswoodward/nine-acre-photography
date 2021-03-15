@@ -141,7 +141,7 @@
 
 .lightbox-image-actions__change {
   width: 40%;
-display: flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
 }
@@ -158,7 +158,7 @@ display: flex;
 }
 
 .modal__close {
-      display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -236,11 +236,11 @@ export default {
       this.image = this.images[parseInt(event.target.getAttribute("index")) + 1];
     },
     getImageByIndex: function (index) {
-        return this.images
+      return this.images;
     },
     getImages: function () {
-        return 
-    }
+      return;
+    },
   },
 };
 </script>

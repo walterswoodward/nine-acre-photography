@@ -29182,10 +29182,10 @@ var _withId = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.withScopeId)("dat
 (0,vue__WEBPACK_IMPORTED_MODULE_0__.pushScopeId)("data-v-169e1534");
 
 var _hoisted_1 = {
-  "class": "about"
+  "class": "about flex flex-col-reverse sm:flex-row sm:justify-flex-end"
 };
 var _hoisted_2 = {
-  "class": "about__bio text-sm"
+  "class": "about__bio w-full sm:w-1/2 text-sm sm:items-center sm:text-center"
 };
 
 (0,vue__WEBPACK_IMPORTED_MODULE_0__.popScopeId)();
@@ -29194,7 +29194,7 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.bio), 1
   /* TEXT */
   ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-    "class": "about__image",
+    "class": "about__image w-full sm:w-1/2",
     style: {
       backgroundImage: 'url(' + $props.aboutImage + ')'
     }
@@ -30044,7 +30044,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.images[data-v-b30c23aa] {\n  margin-top: 50px;\n}\n.image[data-v-b30c23aa] {\n  cursor: pointer;\n}\n.lightbox__wrap[data-v-b30c23aa] {\n  position: absolute;\n  left: 0;\n  width: 100vw;\n  margin-top: 50px;\n  height: calc(100% - 50px);\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.lightbox-image__wrap[data-v-b30c23aa] {\n  width: 100%;\n  height: 74%;\n}\n.lightbox__image[data-v-b30c23aa] {\n  width: 100%;\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center;\n  background-color: #000;\n  height: 100%;\n}\n.lightbox-image__actions[data-v-b30c23aa],\n.lightbox-image__caption[data-v-b30c23aa] {\n  /* position: fixed; */\n  background: rgba(0, 0, 0, 0.8);\n  width: 100%;\n  color: #fff;\n  padding: 10px;\n  text-align: center;\n}\n.lightbox-image__caption[data-v-b30c23aa] {\n  bottom: 0;\n  height: 18%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n.lightbox-image-caption__title[data-v-b30c23aa] {\n  font-weight: 700;\n}\n.lightbox-image-caption__specs[data-v-b30c23aa] {\n  font-weight: 200;\n  font-size: 0.7rem;\n}\n.lightbox-image-caption__description[data-v-b30c23aa] {\n  font-size: 0.75rem;\n}\n.lightbox-image__actions[data-v-b30c23aa] {\n  display: flex;\n  justify-content: space-between;\n  height: 8%;\n}\n.lightbox-image-actions__count[data-v-b30c23aa] {\n  font-size: 0.75rem;\n  display: flex;\n  align-items: center;\n}\n.lightbox-image-actions__change[data-v-b30c23aa] {\n  width: 40%;\ndisplay: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n.arrow__right[data-v-b30c23aa]:hover,\n.arrow__left[data-v-b30c23aa]:hover {\n  color: #fff;\n}\n.lightbox-image-actions__actions[data-v-b30c23aa] {\n  display: flex;\n  justify-content: flex-end;\n  align-items: center;\n}\n.modal__close[data-v-b30c23aa] {\n      display: flex;\n  justify-content: center;\n  align-items: center;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.images[data-v-b30c23aa] {\n  margin-top: 50px;\n}\n.image[data-v-b30c23aa] {\n  cursor: pointer;\n}\n.lightbox__wrap[data-v-b30c23aa] {\n  position: absolute;\n  left: 0;\n  width: 100vw;\n  margin-top: 50px;\n  height: calc(100% - 50px);\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.lightbox-image__wrap[data-v-b30c23aa] {\n  width: 100%;\n  height: 74%;\n}\n.lightbox__image[data-v-b30c23aa] {\n  width: 100%;\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center;\n  background-color: #000;\n  height: 100%;\n}\n.lightbox-image__actions[data-v-b30c23aa],\n.lightbox-image__caption[data-v-b30c23aa] {\n  /* position: fixed; */\n  background: rgba(0, 0, 0, 0.8);\n  width: 100%;\n  color: #fff;\n  padding: 10px;\n  text-align: center;\n}\n.lightbox-image__caption[data-v-b30c23aa] {\n  bottom: 0;\n  height: 18%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n.lightbox-image-caption__title[data-v-b30c23aa] {\n  font-weight: 700;\n}\n.lightbox-image-caption__specs[data-v-b30c23aa] {\n  font-weight: 200;\n  font-size: 0.7rem;\n}\n.lightbox-image-caption__description[data-v-b30c23aa] {\n  font-size: 0.75rem;\n}\n.lightbox-image__actions[data-v-b30c23aa] {\n  display: flex;\n  justify-content: space-between;\n  height: 8%;\n}\n.lightbox-image-actions__count[data-v-b30c23aa] {\n  font-size: 0.75rem;\n  display: flex;\n  align-items: center;\n}\n.lightbox-image-actions__change[data-v-b30c23aa] {\n  width: 40%;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n.arrow__right[data-v-b30c23aa]:hover,\n.arrow__left[data-v-b30c23aa]:hover {\n  color: #fff;\n}\n.lightbox-image-actions__actions[data-v-b30c23aa] {\n  display: flex;\n  justify-content: flex-end;\n  align-items: center;\n}\n.modal__close[data-v-b30c23aa] {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -30092,7 +30092,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.about[data-v-169e1534] {\n  margin-top: 50px;\n  height: calc(100% - 50px);\n  background: black;\n  display: flex;\n  justify-content: flex-end;\n}\n.about__image[data-v-169e1534] {\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: 100% 0%;\n  background-color: #000;\n  height: 100%;\n  width: 50%;\n  -webkit-clip-path: rect(10px, 20px, 30px, 40px);\n          clip-path: rect(10px, 20px, 30px, 40px);\n}\n.about__bio[data-v-169e1534] {\n  color: #ddd;\n  width: 40%;\n  height: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.about[data-v-169e1534] {\n  margin-top: 50px;\n  height: calc(100% - 50px);\n  background: black;\n  justify-content: flex-end;\n}\n.about__image[data-v-169e1534] {\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: 100% 0%;\n  background-color: #000;\n  height: 100%;\n  -webkit-clip-path: rect(10px, 20px, 30px, 40px);\n          clip-path: rect(10px, 20px, 30px, 40px);\n}\n.about__bio[data-v-169e1534] {\n  color: #ddd;\n  height: 100%;\n  padding: 10px;\n  display: flex;\n  /* align-items: center; */\n  /* justify-content: center; */\n}\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -30116,7 +30116,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.custom-font-1[data-v-6a63e488] {\n  font-family: \"Cinzel Decorative\";\n}\n.bg-gray-100[data-v-6a63e488] {\n  background-color: #f7fafc;\n  background-color: rgba(247, 250, 252, var(--tw-bg-opacity));\n}\n.border-gray-200[data-v-6a63e488] {\n  border-color: #edf2f7;\n  border-color: rgba(237, 242, 247, var(--tw-border-opacity));\n}\n.text-gray-400[data-v-6a63e488] {\n  color: #cbd5e0;\n  color: rgba(203, 213, 224, var(--tw-text-opacity));\n}\n.text-gray-500[data-v-6a63e488] {\n  color: #a0aec0;\n  color: rgba(160, 174, 192, var(--tw-text-opacity));\n}\n.text-gray-600[data-v-6a63e488] {\n  color: #718096;\n  color: rgba(113, 128, 150, var(--tw-text-opacity));\n}\n.text-gray-700[data-v-6a63e488] {\n  color: #4a5568;\n  color: rgba(74, 85, 104, var(--tw-text-opacity));\n}\n.text-gray-900[data-v-6a63e488] {\n  color: #1a202c;\n  color: rgba(26, 32, 44, var(--tw-text-opacity));\n}\n@media (prefers-color-scheme: dark) {\n.dark\\:bg-gray-800[data-v-6a63e488] {\n    background-color: #2d3748;\n    background-color: rgba(45, 55, 72, var(--tw-bg-opacity));\n}\n.dark\\:bg-gray-900[data-v-6a63e488] {\n    background-color: #1a202c;\n    background-color: rgba(26, 32, 44, var(--tw-bg-opacity));\n}\n.dark\\:border-gray-700[data-v-6a63e488] {\n    border-color: #4a5568;\n    border-color: rgba(74, 85, 104, var(--tw-border-opacity));\n}\n.dark\\:text-white[data-v-6a63e488] {\n    color: #fff;\n    color: rgba(255, 255, 255, var(--tw-text-opacity));\n}\n.dark\\:text-gray-400[data-v-6a63e488] {\n    color: #cbd5e0;\n    color: rgba(203, 213, 224, var(--tw-text-opacity));\n}\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.custom-font-1[data-v-6a63e488] {\n  font-family: \"Cinzel Decorative\";\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
