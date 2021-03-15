@@ -103,7 +103,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100%;
+  height: 90%;
 }
 
 .lightbox-image__actions,
