@@ -29887,7 +29887,7 @@ var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("
 );
 
 var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-  "class": "w-4/5"
+  "class": "w-4/5 text-sm sm:text-base"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", null, " Founded on the belief that human beings were made to empower one another to create, innovate, and pursue justice together. ")], -1
 /* HOISTED */
 );

@@ -6,7 +6,7 @@
         Nine Acre Photography
       </div>
     </div>
-    <div class="w-4/5">
+    <div class="w-4/5 text-sm sm:text-base">
       <p>
         Founded on the belief that human beings were made to empower one another to
         create, innovate, and pursue justice together.
