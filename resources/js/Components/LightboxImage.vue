@@ -70,25 +70,6 @@
   cursor: pointer;
 }
 
-.arrow__right,
-.arrow__left {
-  /* position: absolute; */
-  /* font-size: 2.5rem; */
-}
-
-.arrow__right {
-  padding-left: 10%;
-}
-
-.arrow__left {
-  padding-right: 10%;
-}
-
-.arrow__right:hover,
-.arrow__left:hover {
-  color: #fff;
-}
-
 .lightbox__wrap {
   position: absolute;
   left: 0;
@@ -160,6 +141,14 @@
 
 .lightbox-image-actions__change {
   width: 40%;
+display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.arrow__right:hover,
+.arrow__left:hover {
+  color: #fff;
 }
 
 .lightbox-image-actions__actions {
