@@ -14,6 +14,7 @@
           v-bind:title="image.title"
           v-bind:description="image.description"
           v-bind:specs="image.specs"
+          v-bind:count="images.length"
         />
       </div>
     </div>
@@ -21,7 +22,7 @@
       <!-- <button class="arrow__right"><font-awesome-icon icon="angle-double-right" /></button> -->
       <!-- <button class="arrow__left"><font-awesome-icon :icon="['fas', 'angle-double-left']" /></button> -->
       <div class="lightbox-image__actions">
-        <div class="lightbox-image-actions__count">{{index}}/4</div>
+        <div class="lightbox-image-actions__count">{{ index }} / {{ imagesCount }}</div>
         <div class="lightbox-image-actions__actions">
           <!-- <font-awesome-icon icon="share-alt" /> -->
           <!-- <font-awesome-icon icon="clone" /> -->
@@ -29,15 +30,11 @@
           <!-- <font-awesome-icon icon="search-plus" /> -->
           <!-- <font-awesome-icon icon="file-download" /> -->
           <button class="modal__close" v-on:click="toggleModal">
-            <font-awesome-icon :icon="['fas', 'times']" class="text-xl"/>
+            <font-awesome-icon :icon="['fas', 'times']" class="text-xl" />
           </button>
         </div>
       </div>
-      <div class="lightbox-image__caption">
-        <p class="lightbox-image-caption__title">{{imageTitle}}</p>
-        <p class="lightbox-image-caption__specs">{{imageSpecs}}</p>
-        <p class="lightbox-image-caption__description">{{imageDescription}}</p>
-      </div>
+
       <div class="lightbox-image__wrap">
         <div
           class="lightbox__image"
@@ -49,13 +46,18 @@
           }"
         ></div>
       </div>
+      <div class="lightbox-image__caption">
+        <p class="lightbox-image-caption__title">{{ imageTitle }}</p>
+        <p class="lightbox-image-caption__specs">{{ imageSpecs }}</p>
+        <p class="lightbox-image-caption__description">{{ imageDescription }}</p>
+      </div>
     </div>
   </div>
 </template>
 
 <style scoped>
 .images {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 .image {
@@ -81,12 +83,11 @@
   color: #fff;
 }
 
-
 .lightbox__wrap {
   position: absolute;
   left: 0;
   width: 100vw;
-    margin-top: 50px;
+  margin-top: 50px;
   height: calc(100% - 50px);
   display: flex;
   flex-direction: column;
@@ -103,13 +104,14 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  height: 90%;
+  background-color: #000;
+  height: 100%;
 }
 
 .lightbox-image__actions,
 .lightbox-image__caption {
-  position: fixed;
-  background: rgba(0, 0, 0, 0.7);
+  /* position: fixed; */
+  background: rgba(0, 0, 0, 0.8);
   width: 100%;
   color: #fff;
   padding: 10px;
@@ -118,9 +120,18 @@
 
 .lightbox-image__caption {
   bottom: 0;
+  height: 15%;
 }
 
-.lightbox-image-caption__specs,
+.lightbox-image-caption__title {
+    font-weight: 700;
+}
+
+.lightbox-image-caption__specs {
+    font-weight: 200;
+    font-size: 0.7rem;
+}
+
 .lightbox-image-caption__description {
   font-size: 0.75rem;
 }
@@ -128,6 +139,7 @@
 .lightbox-image__actions {
   display: flex;
   justify-content: space-between;
+  height: 8%;
 }
 
 .lightbox-image-actions__count {
@@ -182,9 +194,11 @@ export default {
       this.imageTitle = event.target.getAttribute("title");
       this.imageSpecs = event.target.getAttribute("specs");
       this.imageDescription = event.target.getAttribute("description");
+      this.imagesCount = event.target.getAttribute("count");
       this.showModal = !this.showModal;
     },
   },
+  mounted: function () {},
   data: function () {
     return {
       showModal: false,
@@ -195,23 +209,24 @@ export default {
           path: "/v1615741521/Work/07620025_BLK_zeizz3.jpg",
           title: "Symmetry",
           specs: "camera specs for Symmetry",
-          description: "I think of all that we have created. How none of it compares to this flower"
+          description:
+            "I think of all that we have created. How none of it compares to this flower",
         },
         {
           name: "000077340007_zefxif.jpg",
           path: "/v1615741543/Work/000077340007_zefxif.jpg",
           title: "New Morning",
           specs: "camera specs for New Morning",
-          description: "Blades of grass and morning dew remind me of my hope anew"
+          description: "Blades of grass and morning dew remind me of my hope anew",
         },
         {
           name: "000082770009_mtkalu.jpg",
           path: "/v1615741644/Work/000082770009_mtkalu.jpg",
           title: "Another Way",
           specs: "camera specs for Another Way",
-          description: "Beyond that gate is another life just waiting for you"
-        }
-      ]
+          description: "Beyond that gate is another life just waiting for you",
+        },
+      ],
     };
   },
 };
