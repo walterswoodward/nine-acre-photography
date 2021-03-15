@@ -153,7 +153,7 @@ export default {
     phpVersion: String,
   },
   mounted: function () {
-      console.log("Setting public-minimal__wrap height to ", window.innerHeight);
+      // To address this: https://stackoverflow.com/questions/37112218/css3-100vh-not-constant-in-mobile-browser
       document.getElementById('public-minimal__wrap').style.minHeight = window.innerHeight + 'px';
   }
 };
