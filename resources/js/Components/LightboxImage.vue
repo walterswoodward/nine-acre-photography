@@ -19,10 +19,16 @@
       </div>
     </div>
     <div class="lightbox__wrap" v-bind:key="0" v-if="showModal">
-      <!-- <button class="arrow__right"><font-awesome-icon icon="angle-double-right" /></button> -->
-      <!-- <button class="arrow__left"><font-awesome-icon :icon="['fas', 'angle-double-left']" /></button> -->
       <div class="lightbox-image__actions">
         <div class="lightbox-image-actions__count">{{ index }} / {{ imagesCount }}</div>
+        <div class="lightbox-image-actions__change">
+          <button class="arrow__left">
+            <font-awesome-icon :icon="['fas', 'angle-double-left']" />
+          </button>
+          <button class="arrow__right">
+            <font-awesome-icon icon="angle-double-right" />
+          </button>
+        </div>
         <div class="lightbox-image-actions__actions">
           <!-- <font-awesome-icon icon="share-alt" /> -->
           <!-- <font-awesome-icon icon="clone" /> -->
@@ -66,8 +72,8 @@
 
 .arrow__right,
 .arrow__left {
-  position: absolute;
-  font-size: 2.5rem;
+  /* position: absolute; */
+  /* font-size: 2.5rem; */
 }
 
 .arrow__right {
@@ -121,19 +127,19 @@
 .lightbox-image__caption {
   bottom: 0;
   height: 18%;
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .lightbox-image-caption__title {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 .lightbox-image-caption__specs {
-    font-weight: 200;
-    font-size: 0.7rem;
+  font-weight: 200;
+  font-size: 0.7rem;
 }
 
 .lightbox-image-caption__description {
@@ -149,6 +155,13 @@
 .lightbox-image-actions__count {
   font-size: 0.75rem;
   display: flex;
+  align-items: center;
+}
+
+.lightbox-image-actions__change {
+  width: 10rem;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -188,19 +201,6 @@ export default {
     FontAwesomeIcon,
   },
   props: {},
-  methods: {
-    toggleModal: function (event) {
-      event.stopPropagation();
-      this.modalImagePath = event.target.getAttribute("path");
-      this.index = parseInt(event.target.getAttribute("index")) + 1;
-      this.imageTitle = event.target.getAttribute("title");
-      this.imageSpecs = event.target.getAttribute("specs");
-      this.imageDescription = event.target.getAttribute("description");
-      this.imagesCount = event.target.getAttribute("count");
-      this.showModal = !this.showModal;
-    },
-  },
-  mounted: function () {},
   data: function () {
     return {
       showModal: false,
@@ -230,6 +230,25 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    toggleModal: function (event) {
+      event.stopPropagation();
+      this.modalImagePath = event.target.getAttribute("path");
+      this.index = parseInt(event.target.getAttribute("index")) + 1;
+      this.imageTitle = event.target.getAttribute("title");
+      this.imageSpecs = event.target.getAttribute("specs");
+      this.imageDescription = event.target.getAttribute("description");
+      this.imagesCount = event.target.getAttribute("count");
+      this.showModal = !this.showModal;
+      this.image = this.images[parseInt(event.target.getAttribute("index")) + 1];
+    },
+    getImageByIndex: function (index) {
+        return this.images
+    },
+    getImages: function () {
+        return 
+    }
   },
 };
 </script>
