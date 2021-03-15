@@ -27875,7 +27875,15 @@ __webpack_require__.r(__webpack_exports__);
     canRegister: Boolean,
     laravelVersion: String,
     phpVersion: String,
-    message: String
+    message: String,
+    bio: {
+      type: String,
+      "default": "Sam Williams is a professional photographer based in Boston working under the name Nine Acre Photography, a name that pays homage to his childhood home.  His most recent work documenting the city’s protests has been highlighted by the Boston Globe and recognized by the community.  Sam’s work celebrates the raw moments of history in the making, exploring natural light, emotion, and the relationships that form between photographer and subject."
+    },
+    aboutImage: {
+      type: String,
+      "default": "https://res.cloudinary.com/nineacrephotography/image/upload/v1615832940/About/sam-williams_g5n61o.jpg"
+    }
   }
 });
 
@@ -29157,13 +29165,23 @@ var _withId = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.withScopeId)("dat
 var _hoisted_1 = {
   "class": "about"
 };
+var _hoisted_2 = {
+  "class": "about__bio text-sm"
+};
 
 (0,vue__WEBPACK_IMPORTED_MODULE_0__.popScopeId)();
 
 var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.message), 1
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.bio), 1
   /* TEXT */
-  );
+  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+    "class": "about__image",
+    style: {
+      backgroundImage: 'url(' + $props.aboutImage + ')'
+    }
+  }, null, 4
+  /* STYLE */
+  )]);
 });
 
 /***/ }),
@@ -30055,7 +30073,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.about[data-v-169e1534] {\n    margin-top: 50px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.about[data-v-169e1534] {\n  margin-top: 50px;\n  height: calc(100% - 50px);\n  background: black;\n  display: flex;\n  justify-content: flex-end;\n}\n.about__image[data-v-169e1534] {\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: 100% 0%;\n  background-color: #000;\n  height: 100%;\n  width: 50%;\n  -webkit-clip-path: rect(10px, 20px, 30px, 40px);\n          clip-path: rect(10px, 20px, 30px, 40px);\n}\n.about__bio[data-v-169e1534] {\n  color: #ddd;\n  width: 40%;\n  height: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
