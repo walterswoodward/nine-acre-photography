@@ -101,6 +101,7 @@ export default {
       )
     ) {
       // Based on user agent, this is a mobile device. So set fixed height so that lightbox doesn't have a vertical scroll
+      console.log("fixed height set");
       document.getElementById("public-minimal__wrap").style.minHeight = window.innerHeight + "px";
     }
   },
