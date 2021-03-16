@@ -20,12 +20,18 @@
     </div>
     <div class="lightbox__wrap" v-bind:key="0" v-if="showModal">
       <div class="lightbox-image__actions">
-        <div class="lightbox-image-actions__count">{{ index }} / {{ imagesCount }}</div>
+        <div class="lightbox-image-actions__count">
+          {{ currentImage.id }} / {{ imagesCount }}
+        </div>
         <div class="lightbox-image-actions__change">
-          <button class="arrow__left">
+          <button
+            class="arrow__left"
+            v-on:click="previousImage"
+            v-bind:index="currentIndex"
+          >
             <font-awesome-icon :icon="['fas', 'angle-double-left']" />
           </button>
-          <button class="arrow__right">
+          <button class="arrow__right" v-on:click="nextImage" v-bind:index="currentIndex">
             <font-awesome-icon icon="angle-double-right" />
           </button>
         </div>
@@ -47,15 +53,15 @@
           v-bind:style="{
             backgroundImage:
               'url(https://res.cloudinary.com/nineacrephotography/image/upload' +
-              modalImagePath +
+              currentImage.path +
               ')',
           }"
         ></div>
       </div>
       <div class="lightbox-image__caption">
-        <p class="lightbox-image-caption__title">{{ imageTitle }}</p>
-        <p class="lightbox-image-caption__specs">{{ imageSpecs }}</p>
-        <p class="lightbox-image-caption__description">{{ imageDescription }}</p>
+        <p class="lightbox-image-caption__title">{{ currentImage.title }}</p>
+        <p class="lightbox-image-caption__specs">{{ currentImage.specs }}</p>
+        <p class="lightbox-image-caption__description">{{ currentImage.description }}</p>
       </div>
     </div>
   </div>
@@ -137,6 +143,7 @@
   font-size: 0.75rem;
   display: flex;
   align-items: center;
+  width: 30%;
 }
 
 .lightbox-image-actions__change {
@@ -155,6 +162,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  width: 30%;
 }
 
 .modal__close {
@@ -188,6 +196,12 @@ library.add(
   faFileDownload
 );
 
+var lightBoxImages = {
+  all: function (images) {
+    return images;
+  },
+};
+
 export default {
   components: {
     FontAwesomeIcon,
@@ -197,6 +211,8 @@ export default {
     return {
       showModal: false,
       modalImage: null,
+      currentImage: null,
+      currentIndex: null,
       images: [
         {
           name: "07620025_BLK_zeizz3.jpg",
@@ -205,6 +221,7 @@ export default {
           specs: "camera specs for Symmetry",
           description:
             "I think of all that we have created. How none of it compares to this flower",
+          id: 1,
         },
         {
           name: "000077340007_zefxif.jpg",
@@ -212,6 +229,7 @@ export default {
           title: "New Morning",
           specs: "camera specs for New Morning",
           description: "Blades of grass and morning dew remind me of my hope anew",
+          id: 2,
         },
         {
           name: "000082770009_mtkalu.jpg",
@@ -219,6 +237,7 @@ export default {
           title: "Another Way",
           specs: "camera specs for Another Way",
           description: "Beyond that gate is another life just waiting for you",
+          id: 3,
         },
       ],
     };
@@ -226,20 +245,31 @@ export default {
   methods: {
     toggleModal: function (event) {
       event.stopPropagation();
-      this.modalImagePath = event.target.getAttribute("path");
-      this.index = parseInt(event.target.getAttribute("index")) + 1;
-      this.imageTitle = event.target.getAttribute("title");
-      this.imageSpecs = event.target.getAttribute("specs");
-      this.imageDescription = event.target.getAttribute("description");
-      this.imagesCount = event.target.getAttribute("count");
+      let allImages = lightBoxImages.all(this.images);
+      this.currentIndex = event.target.getAttribute("index");
+      this.currentImage = allImages[event.target.getAttribute("index")];
+      // TODO: As this does not change, it should probably be put somewhere else
+      this.imagesCount = allImages.length;
       this.showModal = !this.showModal;
-      this.image = this.images[parseInt(event.target.getAttribute("index")) + 1];
     },
-    getImageByIndex: function (index) {
-      return this.images;
+    nextImage: function (event) {
+      event.stopPropagation();
+      let allImages = lightBoxImages.all(this.images);
+      let newIndex = (parseInt(this.currentIndex) + 1) % 3;
+      this.currentImage = allImages[newIndex];
+      this.currentIndex = newIndex;
     },
-    getImages: function () {
-      return;
+    previousImage: function () {
+      event.stopPropagation();
+      let allImages = lightBoxImages.all(this.images);
+
+      let newIndex = parseInt(this.currentIndex) - 1;
+      if (newIndex < 0) {
+        newIndex = this.imagesCount - 1;
+      }
+
+      this.currentImage = allImages[newIndex];
+      this.currentIndex = newIndex;
     },
   },
 };
